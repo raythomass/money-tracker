@@ -1,6 +1,10 @@
+import { Outlet } from "react-router-dom"
+
 function App() {
   return (
-    <div className='App'>Hello World!</div>
+    <div className='App'>
+      <Outlet/>
+    </div>
   )
 }
 
