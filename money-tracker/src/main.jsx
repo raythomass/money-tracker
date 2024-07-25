@@ -1,6 +1,6 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App, { appLoader } from './App.jsx'
 import './index.css'
 import Dashboard, { dashboardLoader } from "./pages/Dashboard.jsx"
 import Error from "./pages/Error.jsx"
@@ -9,6 +9,7 @@ const router = createBrowserRouter ([
   {
     path:'/',
     element: <App/>,
+    loader: appLoader,
     errorElement: <Error/>,
     children: [
       {
