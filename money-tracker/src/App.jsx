@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import { fetchData } from "./helpers";
+import Nav from "./components/Nav";
+import './App.css'
 
 
 export function appLoader () {
@@ -9,11 +11,12 @@ export function appLoader () {
 }
 
 function App() {
-  // const {userName} = useLoaderData()
+  const {userName} = useLoaderData()
 
   return (
     <div className='App'>
       {/* <h1> { userName } </h1> */}
+      <Nav userName = {userName}/>
       <main>
         <Outlet/>
       </main>
