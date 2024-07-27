@@ -1,10 +1,18 @@
+//React and Router
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import ReactDOM from 'react-dom/client'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+//Loaders
 import App, { appLoader } from './App.jsx'
-import './index.css'
+//Pages
 import Dashboard, { dashboardLoader } from "./pages/Dashboard.jsx"
 import Error from "./pages/Error.jsx"
+//Helpers
 import { logoutAction } from "./actions/logout.js"
+//CSS
+import './index.css'
+
 
 const router = createBrowserRouter ([
   {
@@ -29,5 +37,8 @@ const router = createBrowserRouter ([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router = {router}/>
+    <>
+    <RouterProvider router = {router}/>
+    <ToastContainer/>
+    </>
 )
